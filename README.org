@@ -1,0 +1,49 @@
+* Haskell Reference
+  Reference for basic Haskell concepts and tooling.
+
+** Tooling
+   The tooling setup aims towards a as short feedback loop as possible.
+
+*** Installation
+**** ghcup
+     - [[https://www.haskell.org/ghcup/][Docs]]
+     - ghcup tui
+
+*** Build tooling
+**** Cabal
+     - [[https://cabal.readthedocs.io/en/3.6/][Docs]]
+     - To start a new Haskell project in the current dir
+       - cabal init --interactive
+       - cabal init
+     - To build and run
+       - cabal run
+
+*** Development tooling
+    Centered around Emacs.
+**** ghcid
+     - [[https://hackage.haskell.org/package/ghcid][Hackage package]]
+     - Run cabal update && cabal install ghcid to install it
+     - Run with `ghcid`
+     - Run with `ghcid --allow-eval` to enable evaluation of comments
+       - onliners `-- $> getName (Person "Roffe")`
+       - or blocks with `{- $> <$ -}`
+
+**** ghci
+     - Can use a .ghci file in the root dir
+
+**** Prettifier
+     - [[https://github.com/haskell/stylish-haskell][stylish-haskell]]
+       - can be configured to work with [[https://haskell.github.io/haskell-mode/manual/latest/Editing-Haskell-Code.html#Editing-Haskell-Code][Emacs]]
+**** Linting
+     - [[https://hackage.haskell.org/package/hlint][HLint]]
+
+**** Emacs
+     - [[https://github.com/haskell/haskell-mode][Haskell-mode]]
+       - [[https://haskell.github.io/haskell-mode/manual/latest/][Docs]]
+     - Generate tags with [[https://github.com/MarcWeber/hasktags][hasktags]]
+     - Load a file starts a REPL, `C-c C-l`
+
+** References
+   - [[https://jkeuhlen.com/2019/10/19/Compile-Your-Comments-In-Ghcid.html][Compile your comments in ghcid]]
+   - [[https://hackage.haskell.org/package/ghcid][ghcid]]
+   - [[https://hackage.haskell.org/package/ghcid][Hackage: The Haskell Package Repository]]
