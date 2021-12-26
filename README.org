@@ -1,6 +1,24 @@
 * Haskell Reference
   Reference for basic Haskell concepts and tooling.
 
+** Project Setup
+   A small step by step setup for a simple beginner project. This can be accomplished by ~cabal init~, but for learning I recommend to do it manual a few times.
+
+*** Directory Structure
+    In your project folder (~example-setup~ in this repo):
+    1. ~mkdir app~ - this folder will contain your applications main entry point.
+    2. ~touch app/Main.hs~ - file for main entry point.
+    3. ~mkdir src~ - the root folder for all other source code files in the project.
+    4. ~touch src/Lib.hs~ - file containg our example code.
+
+*** Cabal Setup
+    For the simple project setup, we will use a basic cabal file. Name the file as the project folder, ~touch example-setup.cabal~, and check [[file:example-setup/example-setup.cabal][the example cabal file for reference]].
+
+*** Source
+    Open ~./app/Main.hs~ and check the [[file:example-setup/app/Main.hs][example Main.hs]].
+    After the main-file is in place, you can now compile and run the application with:
+    ~cabal run~
+
 ** Tooling
    The tooling setup aims towards a as short feedback loop as possible.
 
