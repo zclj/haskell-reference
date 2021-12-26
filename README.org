@@ -31,20 +31,20 @@
 **** Cabal
      - [[https://cabal.readthedocs.io/en/3.6/][Docs]]
      - To start a new Haskell project in the current dir
-       - cabal init --interactive
-       - cabal init
+       - ~cabal init --interactive~
+       - ~cabal init~
      - To build and run
-       - cabal run
+       - ~cabal run~
 
 *** Development tooling
     Centered around Emacs.
 **** ghcid
      - [[https://hackage.haskell.org/package/ghcid][Hackage package]]
-     - Run cabal update && cabal install ghcid to install it
-     - Run with `ghcid`
-     - Run with `ghcid --allow-eval` to enable evaluation of comments
-       - onliners `-- $> getName (Person "Roffe")`
-       - or blocks with `{- $> <$ -}`
+     - Run ~cabal update && cabal install ghcid~ to install it
+     - Run with ~ghcid~
+     - Run with ~ghcid --allow-eval~ to enable evaluation of comments
+       - onliners ~-- $> getName (Person "Roffe")~
+       - or blocks with ~{- $> <$ -}~
 
 **** ghci
      - Can use a .ghci file in the root dir
@@ -59,7 +59,7 @@
      - [[https://github.com/haskell/haskell-mode][Haskell-mode]]
        - [[https://haskell.github.io/haskell-mode/manual/latest/][Docs]]
      - Generate tags with [[https://github.com/MarcWeber/hasktags][hasktags]]
-     - Load a file starts a REPL, `C-c C-l`
+     - Load a file starts a REPL, ~C-c C-l~
 
 ** References
    - [[https://jkeuhlen.com/2019/10/19/Compile-Your-Comments-In-Ghcid.html][Compile your comments in ghcid]]
