@@ -19,6 +19,15 @@
     After the main-file is in place, you can now compile and run the application with:
     ~cabal run~
 
+*** Create library source
+    Open ~./app/Lib.hs~ and add some code. Check [[file:example-setup-lib/src/Lib.hs][Lib.hs]] for an example.
+
+*** Call the library from the main app
+    Add a call from ~Main.hs~ to the library. See [[file:example-setup-lib/app/Main.hs][Main.hs]] for an example.
+
+*** Add library to the Cabal file
+    For the library code to be compiled and added to the project, a stanza need to be added to the cabal file. Once one is added for the library code, the executable must be updated to include a dependency to the project. Check the updated [[file:example-setup-lib/example-setup.cabal][cabal-file]] for an example.
+
 ** Tooling
    The tooling setup aims towards a as short feedback loop as possible.
 
