@@ -4,29 +4,39 @@
 ** Project Setup
    A small step by step setup for a simple beginner project. This can be accomplished by ~cabal init~, but for learning I recommend to do it manual a few times.
 
-*** Directory Structure
-    In your project folder (~example-setup~ in this repo):
-    1. ~mkdir app~ - this folder will contain your applications main entry point.
-    2. ~touch app/Main.hs~ - file for main entry point.
-    3. ~mkdir src~ - the root folder for all other source code files in the project.
-    4. ~touch src/Lib.hs~ - file containg our example code.
+*** Basics
+**** Directory Structure
+     In your project folder (~example-setup~ in this repo):
+     1. ~mkdir app~ - this folder will contain your applications main entry point.
+     2. ~touch app/Main.hs~ - file for main entry point.
+     3. ~mkdir src~ - the root folder for all other source code files in the project.
+     4. ~touch src/Lib.hs~ - file containg our example code.
 
-*** Cabal Setup
-    For the simple project setup, we will use a basic cabal file. Name the file as the project folder, ~touch example-setup.cabal~, and check [[file:example-setup/example-setup.cabal][the example cabal file for reference]].
+**** Cabal Setup
+     For the simple project setup, we will use a basic cabal file. Name the file as the project folder, ~touch example-setup.cabal~, and check [[file:example-setup/example-setup.cabal][the example cabal file for reference]].
 
-*** Source
-    Open ~./app/Main.hs~ and check the [[file:example-setup/app/Main.hs][example Main.hs]].
-    After the main-file is in place, you can now compile and run the application with:
-    ~cabal run~
+**** Source
+     Open ~./app/Main.hs~ and check the [[file:example-setup/app/Main.hs][example Main.hs]].
+     After the main-file is in place, you can now compile and run the application with:
+     ~cabal run~
 
-*** Create library source
-    Open ~./app/Lib.hs~ and add some code. Check [[file:example-setup-lib/src/Lib.hs][Lib.hs]] for an example.
+**** Create library source
+     Open ~./app/Lib.hs~ and add some code. Check [[file:example-setup-lib/src/Lib.hs][Lib.hs]] for an example.
 
-*** Call the library from the main app
-    Add a call from ~Main.hs~ to the library. See [[file:example-setup-lib/app/Main.hs][Main.hs]] for an example.
+**** Call the library from the main app
+     Add a call from ~Main.hs~ to the library. See [[file:example-setup-lib/app/Main.hs][Main.hs]] for an example.
 
-*** Add library to the Cabal file
-    For the library code to be compiled and added to the project, a stanza need to be added to the cabal file. Once one is added for the library code, the executable must be updated to include a dependency to the project. Check the updated [[file:example-setup-lib/example-setup.cabal][cabal-file]] for an example.
+**** Add library to the Cabal file
+     For the library code to be compiled and added to the project, a stanza need to be added to the cabal file. Once one is added for the library code, the executable must be updated to include a dependency to the project. Check the updated [[file:example-setup-lib/example-setup.cabal][cabal-file]] for an example.
+
+
+
+*** Tests
+
+*** Improvements
+
+**** TODO Add common section in cabal file
+     - See [[https://cabal.readthedocs.io/en/3.6/developing-packages.html#modules-imported-from-other-packages][docs]]
 
 ** Tooling
    The tooling setup aims towards a as short feedback loop as possible.
