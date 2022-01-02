@@ -46,6 +46,9 @@
      We need a cabal stanza for cabal to know about our tests. [[file:example-setup-with-tests/example-setup.cabal][In example-setup.cabal]] a stanze for the test setup have been added. Now there are two ways to run the tests. If we use ~cabal test~, the tests will be run but cabal do not know if they failed or not, so all tests will always pass. The other way is to run test main with ~cabal run example-tests~, this will show the correct failure counts. If you want to use ~cabal test~, you need to add some code to exit with failure if HUnit failure count is larger than 0.
      The [[file:example-setup-with-tests/test/Specs.hs][Specs.hs]] contains an example as a comment.
 
+*** More tests
+    To be able to integrate several types of tests in the same suite, but with different grouping, we will use [[https://github.com/UnkindPartition/tasty][Tasty]].
+
 *** Improvements
 
 **** TODO Add common section in cabal file

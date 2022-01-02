@@ -1,0 +1,40 @@
+cabal-version: 2.4
+name:          example-setup
+version:       0.1.0.0
+
+library
+    exposed-modules:
+        Lib
+    hs-source-dirs:
+        src
+    build-depends:
+        base ^>=4.14.3.0
+    default-language: Haskell2010
+
+test-suite example-tests
+  type:          exitcode-stdio-1.0
+  main-is:       Specs.hs
+  hs-source-dirs: test
+  other-modules: HelloTest
+  build-depends:
+    base,
+    tasty,
+    tasty-hunit,
+    example-setup
+    
+executable example-setup-exe
+    -- Pointing to the main entry point
+    main-is: Main.hs
+
+    -- Depends on base package
+    build-depends:
+        base ^>=4.14.3.0,
+        -- The executable now has a dep. to this project via the library
+        example-setup
+
+    -- Language version
+    default-language: Haskell2010
+
+    -- Dir with our source
+    hs-source-dirs:   app
+    
