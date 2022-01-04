@@ -49,6 +49,8 @@
 *** More tests
     To be able to integrate several types of tests in the same suite, but with different grouping, we will use [[https://github.com/UnkindPartition/tasty][Tasty]].
 
+    To see more detailed output, either look in the test log file (the output of ~cabal test~ will output the path to the file) or run cabal with the ~--test-show-details=streaming~ option. However, when running with "Tasty", if any test fails, output will be shown.
+
 *** Improvements
 
 **** TODO Add common section in cabal file
