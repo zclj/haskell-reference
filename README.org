@@ -82,6 +82,7 @@
      - Run with ~ghcid --allow-eval~ to enable evaluation of comments
        - onliners ~-- $> getName (Person "Roffe")~
        - or blocks with ~{- $> <$ -}~
+     - Run with ~ghcid --command "cabal repl TARGET"~ to include specific build targets (such as tests).
 
 **** ghci
      - Can use a .ghci file in the root dir
