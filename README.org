@@ -86,6 +86,9 @@
 **** ghci
      - Can use a .ghci file in the root dir
 
+**** cabal repl
+     - Can be used to start a ghci instance. Specify the targets to use as defined in the project's cabal file i.e. ~cabal repl TARGETS~.
+
 **** Prettifier
      - [[https://github.com/haskell/stylish-haskell][stylish-haskell]]
        - can be configured to work with [[https://haskell.github.io/haskell-mode/manual/latest/Editing-Haskell-Code.html#Editing-Haskell-Code][Emacs]]
