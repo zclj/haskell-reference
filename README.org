@@ -101,6 +101,7 @@
        - [[https://haskell.github.io/haskell-mode/manual/latest/][Docs]]
      - Generate tags with [[https://github.com/MarcWeber/hasktags][hasktags]]
      - Load a file starts a REPL, ~C-c C-l~
+       - *NOTE* use ~haskell-session-change-target~ to change build target in the interactive session (for example to change to tests).
 
 ** References
    - [[https://jkeuhlen.com/2019/10/19/Compile-Your-Comments-In-Ghcid.html][Compile your comments in ghcid]]
