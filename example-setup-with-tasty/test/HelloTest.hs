@@ -1,8 +1,12 @@
 module HelloTest where
 
-import           Lib              as SUT
+import           Data.List
+import           Lib                   as SUT
 import           Test.Tasty
-import           Test.Tasty.HUnit as HU
+import           Test.Tasty.HUnit      as HU
+import           Test.Tasty.QuickCheck as QC
+
+-- Unit tests
 
 helloUnitTest = HU.testCase "Unit test example" $
     assertEqual "for (hello \"world\")"
@@ -11,3 +15,12 @@ helloUnitTest = HU.testCase "Unit test example" $
 helloFailingUnitTest = HU.testCase "Unit test failing example" $
     assertEqual "for (hello \"world\")"
                 "Hello, Fix me" (SUT.hello "world")
+
+-- Properties
+
+containsProperty = QC.testProperty "hello result contains input" $
+  \s -> isInfixOf s (SUT.hello (s :: String))
+
+notContainsProperty = QC.testProperty "hello result does not contain input (example of failing property)" $
+  \s -> (s::String) /= "" QC.==>
+        not $ (s :: String) `isInfixOf` (SUT.hello (s :: String))
