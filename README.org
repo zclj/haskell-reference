@@ -51,6 +51,8 @@
 
     To see more detailed output, either look in the test log file (the output of ~cabal test~ will output the path to the file) or run cabal with the ~--test-show-details=streaming~ option. However, when running with "Tasty", if any test fails, output will be shown.
 
+    The files [[file:example-setup-with-tasty/test/Specs.hs][Specs.hs]] and [[file:example-setup-with-tasty/test/HelloTest.hs][HelloTests.hs]] show an example how to integrate both unit-tests, with HUnit, and property-based tests, with QuickCheck.
+
 *** Improvements
 
 **** TODO Add common section in cabal file

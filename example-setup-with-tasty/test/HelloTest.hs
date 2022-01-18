@@ -6,7 +6,7 @@ import           Test.Tasty
 import           Test.Tasty.HUnit      as HU
 import           Test.Tasty.QuickCheck as QC
 
--- Unit tests
+-- Unit tests - with HUnit
 
 helloUnitTest = HU.testCase "Unit test example" $
     assertEqual "for (hello \"world\")"
@@ -16,7 +16,7 @@ helloFailingUnitTest = HU.testCase "Unit test failing example" $
     assertEqual "for (hello \"world\")"
                 "Hello, Fix me" (SUT.hello "world")
 
--- Properties
+-- Properties - with QuickCheck
 
 containsProperty = QC.testProperty "hello result contains input" $
   \s -> isInfixOf s (SUT.hello (s :: String))
